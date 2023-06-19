@@ -1,12 +1,27 @@
-# Dotfiles
+# Dev setup
 
-This is my collection of dotfiles to set up a new development machine.
+This is the repo I use to set up a new machine and get it ready for development.
 
-## Dev setup
+## Prerequisites
 
-### Dotfiles
+Run this to make sure you're up to date and and you have XCode command line tools installed:
+
+```bash
+sudo softwareupdate -i -a
+xcode-select --install
+```
+
+###  Dotfiles
 
 [TBD]
+
+### Mac OSX defaults
+
+Tweak the operating system with better defaults:
+
+```bash
+./osx.sh
+```
 
 ### Homebrew
 
@@ -16,7 +31,13 @@ Install [Homebrew](https://docs.brew.sh/Installation):
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-### Install zsh
+### Install cli tools
+
+```bash
+./brew.sh
+```
+
+### zsh
 
 Install [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH):
 
@@ -36,7 +57,7 @@ On Intel-based machines:
 chsh -s /usr/local/bin/zsh
 ```
 
-### Install oh-my-zsh
+### oh-my-zsh
 
 Install [oh-my-zsh](https://ohmyz.sh/):
 
@@ -52,10 +73,28 @@ Install [Git](https://git-scm.com/download/mac):
 brew install git
 ```
 
+#### Set up Git SSH authentication with Github
+
+1. Generate a new key ([reference](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)):
+   ```bash
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+   ```
+2. Copy the SSH public key to your clipboard ([reference](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account))
+   ```bash
+   pbcopy < ~/.ssh/id_ed25519.pub
+   ```
+3. Create a new SSH key [on Github](https://github.com/settings/keys) and paste your public key
+
 ### Install apps
 
 Install apps using:
 
 ```bash
 ./apps.sh
+```
+
+### Set up dock icons
+
+```bash
+./dock.sh
 ```
