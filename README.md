@@ -7,8 +7,7 @@ This is the repo I use to set up a new machine and get it ready for development.
 Run this to make sure you're up to date and and you have XCode command line tools installed:
 
 ```bash
-sudo softwareupdate -i -a
-xcode-select --install
+./osxprep.sh
 ```
 
 ###  Dotfiles
