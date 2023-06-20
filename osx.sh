@@ -64,6 +64,10 @@ sudo systemsetup -setrestartfreeze on
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
 
+# Set display sleep time to 1 hour when charging and 30 minuts when on battery
+sudo pmset -c displaysleep 60
+sudo pmset -b displaysleep 30
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 sudo nvram StartupMute=%01

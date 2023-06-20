@@ -100,3 +100,7 @@ Install apps using:
 ```bash
 ./dock.sh
 ```
+
+## References
+
+- [macOS defaults](https://macos-defaults.com/)
