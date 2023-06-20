@@ -1,24 +1,24 @@
-tap "homebrew/bundle"
-tap "homebrew/core"
-tap "lotyp/homebrew-formulae"
+brew tap "homebrew/bundle"
+brew tap "homebrew/core"
+brew tap "lotyp/homebrew-formulae"
 
 # core/dotfiles
-brew "lotyp/formulae/dockutil"
+brew install "lotyp/formulae/dockutil"
 
 # fs/network
-brew "bat"
-brew "httpie"
-brew "ngrok"
-brew "wget"
+brew install "bat"
+brew install "httpie"
+brew install "ngrok"
+brew install "wget"
 
 # search/grep/diff
-brew "diff-so-fancy"
-brew "difftastic"
-brew "fd"
-brew "grep"
-brew "psgrep"
+brew install "diff-so-fancy"
+brew install "difftastic"
+brew install "fd"
+brew install "grep"
+brew install "psgrep"
 
 # languages/tools
-brew "gh"
-brew "nvm"
-brew "python"
+brew install "gh"
+brew install "nvm"
+brew install "python"
