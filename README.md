@@ -23,6 +23,8 @@ Tweak the operating system with better defaults:
 ./osx.sh
 ```
 
+Please note that you may need to log out and log back in for some changes to take effect.
+
 ### Homebrew
 
 Install [Homebrew](https://docs.brew.sh/Installation):

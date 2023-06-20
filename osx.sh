@@ -214,11 +214,17 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true Ope
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
+# Set icons size
+defaults write com.apple.dock tilesize -int 48
+
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Hide/show the Dock instantly
-defaults write com.apple.dock autohide-time-modifier -int 0
+# Speed up animation for showing/hiding
+defaults write com.apple.dock autohide-time-modifier -float 0.25
+
+# Remove delay before showing the Dock
+defaults write com.apple.dock autohide-delay -float 0
 
 # Disable hot corners
 defaults write com.apple.dock wvous-tl-corner -int 0
@@ -228,6 +234,30 @@ defaults write com.apple.dock wvous-br-corner -int 0
 
 # Don't show recently used applications in the Dock
 defaults write com.Apple.Dock show-recents -bool false
+
+# Change the Dock minimize animation to scale instead of genie
+defaults write com.apple.dock mineffect -string "scale"
+
+###############################################################################
+# Mission Control                                                             #
+###############################################################################
+
+# Don't rearrange spaces automatically based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
+###############################################################################
+# Safari                                                                      #
+###############################################################################
+
+# Show full website address
+defaults write com.apple.safari ShowFullURLInSmartSearchField -bool true
+
+###############################################################################
+# TextEdit                                                                    #
+###############################################################################
+
+# Set default document format as plain text (.txt)
+defaults write com.apple.TextEdit RichText -bool false
 
 ###############################################################################
 # Calendar                                                                    #
@@ -285,6 +315,6 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal"; do
+for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal" "TextEdit"; do
   killall "${app}" &> /dev/null
 done
