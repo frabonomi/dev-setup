@@ -4,6 +4,7 @@ brew tap "lotyp/homebrew-formulae"
 
 # core/dotfiles
 brew install "lotyp/formulae/dockutil"
+brew install mackup
 
 # fs/network
 brew install "bat"
@@ -20,5 +21,3 @@ brew install "psgrep"
 
 # languages/tools
 brew install "gh"
-brew install "nvm"
-brew install "python"

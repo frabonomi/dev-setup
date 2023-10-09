@@ -66,6 +66,10 @@ Install [oh-my-zsh](https://ohmyz.sh/):
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+#### Install zsh-syntax-highlighting
+
+Install a custom plugin for zsh to add syntax highlighting when typing in the shell following [these instructions](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh).
+
 ### Git
 
 Install [Git](https://git-scm.com/download/mac):
@@ -99,6 +103,30 @@ Install apps using:
 ```bash
 ./dock.sh
 ```
+
+## Restore apps settings using Mackup
+
+[TBD]
+
+## Web development
+
+### Install nvm and node
+
+Use NVM (Node Version Manager) to be able to manage the installation of different Node versions on the same machine.
+
+- [Install NVM](https://github.com/nvm-sh/nvm#install--update-script) using curl
+
+  ```bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  ```
+
+  This will also add a snippet in `.zshrc` file to load NVM.
+
+- [Install Node](https://github.com/nvm-sh/nvm#usage). Here we install the long term support version
+
+  ```bash
+  nvm install --lts
+  ```
 
 ## References
 
