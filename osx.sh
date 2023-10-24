@@ -98,6 +98,9 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
+# Always show scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+
 ###############################################################################
 # Keyboard & Input                                                            #
 ###############################################################################
